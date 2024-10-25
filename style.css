@@ -10,6 +10,7 @@ body {
     align-items: center;
     justify-content: center;
     display: flex;
+    background-color: bisque;
   }
 #start-btn{
     border-radius: 13px;
