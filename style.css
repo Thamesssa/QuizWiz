@@ -1,0 +1,54 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+#start-btn{
+    border-radius: 13px;
+    margin-left: 100px;
+    margin-top: 15px;
+    width: 30%;
+    color: rgb(238, 231, 231);
+    background-color: #070707;
+  
+}
+p{
+    text-align: center;
+}
+
+  
+  .page.active {
+    display: block;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  input {
+    padding: 10px;
+    margin-top: 10px;
+  }
+
+#landing-page {
+    width: 600px ;
+    margin: 50px;
+    
+    
+    justify-content: center;
+   
+}
+
+#landing-page img {
+    max-width: 360px;
+}
