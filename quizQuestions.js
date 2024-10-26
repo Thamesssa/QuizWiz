@@ -34,8 +34,8 @@ const quizQuestions = [
           answer: 'b'
         },
       {
-          question: "Which tool is commonly used for unit testing in JavaScript?",
-          options: ["Mocha", "React", "Vue", "Express"],
+          question: "Which tool is used for unit testing in JavaScript?",
+          options: ["Jest", "React", "Bootstrap", "Express"],
           answer: 'a'
         },
         {
