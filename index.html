@@ -7,32 +7,51 @@
     <title>Quiz App</title>
   </head>
   <body>
-    <div class="quiz-container" id="quiz">
-      <div class="quiz-header">
-        <h2 id="question">Question text</h2>
-        <ul>
-          <li>
-            <input type="radio" name="answer" id="a" class="answer">
-            <label for="a" id="a_text">Question</label>
-          </li>
+    <div class="quiz-container">
+      <div id="start-page">
+        <img src="DALLE.webp" alt="" width="1700px" />
+        <form class="form">
+          <h2>Welcome To QuizWiz</h2>
 
-          <li>
-            <input type="radio" name="answer" id="b" class="answer">
-            <label for="b" id="b_text">Question</label>
-          </li>
-
-          <li>
-            <input type="radio" name="answer" id="c" class="answer">
-            <label for="c" id="c_text">Question</label>
-          </li>
-
-          <li>
-            <input type="radio" name="answer" id="d" class="answer">
-            <label for="d" id="d_text">Question</label>
-          </li>
-        </ul>
+          <input type="text" id="name" placeholder="Enter your name" />
+          <button id="start-quiz">Start Quiz</button>
+        </form>
       </div>
-      <button id="submit">Submit</button>
+
+      <div id="quiz" style="display: none">
+        <div>
+          <img src="DALLE.webp" alt="" width="800px" />
+        </div>
+
+        <div class="quiz-questions">
+          <div id="welcome-header">
+            <h3 id="welcome-message"></h3>
+          </div>
+          <h2 id="question">Question text</h2>
+          <ul>
+            <li>
+              <input type="radio" name="answer" id="a" class="answer" />
+              <label for="a" id="a_text">Question</label>
+            </li>
+
+            <li>
+              <input type="radio" name="answer" id="b" class="answer" />
+              <label for="b" id="b_text">Question</label>
+            </li>
+
+            <li>
+              <input type="radio" name="answer" id="c" class="answer" />
+              <label for="c" id="c_text">Question</label>
+            </li>
+
+            <li>
+              <input type="radio" name="answer" id="d" class="answer" />
+              <label for="d" id="d_text">Question</label>
+            </li>
+            <button id="submit">Next Question</button>
+          </ul>
+        </div>
+      </div>
     </div>
     <script src="script.js" type="module"></script>
   </body>
