@@ -17,8 +17,7 @@ const form = document.querySelector(".form")
 // Shuffle the quizQuestions array
 const shuffledQuestions = quizQuestions.sort(() => 0.5 - Math.random());
 
-// Limit the number of questions to 5
-const limitedQuestions = shuffledQuestions.slice(0, 5);
+const limitedQuestions = shuffledQuestions.slice(1, 5);
 
 let currentQuiz = 0;
 let score = 0;
@@ -52,6 +51,7 @@ function getSelected() {
 
     return answer;
 }
+
 startQuiz.addEventListener("click", (e)=>{
     e.preventDefault()
     const name = document.getElementById("name").value;
@@ -59,7 +59,6 @@ startQuiz.addEventListener("click", (e)=>{
     localStorage.setItem("userName", name)
     form.style.display = "none";
     quiz.style.display = "block"
-
 
 })
 

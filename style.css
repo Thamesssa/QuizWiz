@@ -25,6 +25,7 @@ body {
     max-width: 600px;
     width: 100%;
     opacity: 0.5ß;
+    display: none;
 }
 
 .quiz-header {
