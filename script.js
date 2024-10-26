@@ -60,6 +60,11 @@ startQuizBtn.addEventListener("click", (e) => {
 nextQuestionBtn.addEventListener("click", () => {
   const answer = getSelected();
 
+   if (!answer) {
+    alert('Please choose an answer before proceeding.');
+    return; 
+  }
+
   if (answer) {
     const isCorrect = answer === limitedQuestions[currentQuiz].answer;
     score = increaseScore(isCorrect);
@@ -69,6 +74,8 @@ nextQuestionBtn.addEventListener("click", () => {
     if (currentQuiz < limitedQuestions.length) {
       loadQuiz();
     } else {
+
+      
       quiz.innerHTML = `
                  <h2>You answered ${score}/${limitedQuestions.length} questions correctly</h2>
                 <button onclick="location.reload()">Restart Quiz</button>
