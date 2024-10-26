@@ -17,9 +17,9 @@ const form = document.querySelector(".form")
 // Shuffle the quizQuestions array
 const shuffledQuestions = quizQuestions.sort(() => 0.5 - Math.random());
 
-const limitedQuestions = shuffledQuestions.slice(1, 5);
+const limitedQuestions = shuffledQuestions.slice(0, 5);
 
-let currentQuiz = 0;
+let currentQuiz = 1;
 let score = 0;
 
 

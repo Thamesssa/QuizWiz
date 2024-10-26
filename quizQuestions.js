@@ -21,8 +21,8 @@ const quizQuestions = [
           question: "How do you add a border to an element?",
           options: ["border: 1px solid black;", "outline: 1px solid black;", "border-style: solid black;", "border-width: 1px;"],
           answer: "a"
-    },
-    {
+        },
+        {
    
           question: "Which keyword is used to declare a variable in JavaScript?",
           options: ["let", "var", "const", "All of the above"],
