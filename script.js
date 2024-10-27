@@ -69,8 +69,19 @@ nextQuestionBtn.addEventListener("click", () => {
     if (currentQuiz < limitedQuestions.length) {
       loadQuiz();
     } else {
+      let message = "";
+      if (score === 5) {
+        message = "Perfect score! Excellent job! 🏆";
+      } else if (score >= 3) {
+        message = "Well done! Good effort! 👏";
+      } else {
+        message = "Keep practicing! You can do better! 💪";
+      }
+
       quiz.innerHTML = `
-                 <h2>You answered ${score}/${limitedQuestions.length} questions correctly</h2>
+                 <h2>Quiz Complete!</h2>
+                <h2>You answered ${score}/${limitedQuestions.length} questions correctly</h2>
+                <p>${message}</p>
                 <button onclick="location.reload()">Restart Quiz</button>
             `;
     }
