@@ -1,58 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>Quiz App</title>
-  </head>
-  <body>
+</head>
+<body>
     <div class="quiz-container">
-      <div id="start-page">
-        <img src="DALLE.webp" alt="" width="1700px" />
-        <form class="form">
-          <h2>Welcome To QuizWiz</h2>
-
-          <input type="text" id="name" placeholder="Enter your name" />
-          <button id="start-quiz">Start Quiz</button>
-        </form>
-      </div>
-
-      <div id="quiz" style="display: none">
-        <div>
-          <img src="DALLE.webp" alt="" width="800px" />
+        <div id="start-page" class="content-section">
+            <img src="DALLE.webp" alt="Quiz Image" class="left-image"/>
+            <div class="text-content">
+             <h3>Welcome to the Quiz Adventure!</h3>
+                <form class="form">
+                  <p>Get ready to test your knowledge and have fun!</p>
+                  <input
+                    type="text"
+                    id="name"
+                    placeholder="What's your name?"
+                    class="name-input"
+                  />
+                    <button id="start-quiz">Start Quiz</button>
+                </form>
+            </div>
         </div>
 
-        <div class="quiz-questions">
-          <div id="welcome-header">
-            <h3 id="welcome-message"></h3>
-          </div>
-          <h2 id="question">Question text</h2>
-          <ul>
-            <li>
-              <input type="radio" name="answer" id="a" class="answer" />
-              <label for="a" id="a_text">Question</label>
-            </li>
-
-            <li>
-              <input type="radio" name="answer" id="b" class="answer" />
-              <label for="b" id="b_text">Question</label>
-            </li>
-
-            <li>
-              <input type="radio" name="answer" id="c" class="answer" />
-              <label for="c" id="c_text">Question</label>
-            </li>
-
-            <li>
-              <input type="radio" name="answer" id="d" class="answer" />
-              <label for="d" id="d_text">Question</label>
-            </li>
-            <button id="submit">Next Question</button>
-          </ul>
+        <div id="quiz" style="display: none" class="content-section">
+            <img src="DALLE.webp" alt="Quiz Image" class="left-image" />
+            <div class="quiz-questions text-content">
+                <h3 id="welcome-message"></h3>
+                <h2 id="question">Question text</h2>
+                <ul>
+                    <li><input type="radio" name="answer" id="a" class="answer" /><label for="a" id="a_text">Option A</label></li>
+                    <li><input type="radio" name="answer" id="b" class="answer" /><label for="b" id="b_text">Option B</label></li>
+                    <li><input type="radio" name="answer" id="c" class="answer" /><label for="c" id="c_text">Option C</label></li>
+                    <li><input type="radio" name="answer" id="d" class="answer" /><label for="d" id="d_text">Option D</label></li>
+                </ul>
+                <button id="submit">Next Question</button>
+            </div>
         </div>
-      </div>
     </div>
     <script src="script.js" type="module"></script>
-  </body>
+</body>
 </html>

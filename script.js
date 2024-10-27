@@ -57,6 +57,7 @@ startQuizBtn.addEventListener("click", (e) => {
   loadQuiz();
 });
 
+
 nextQuestionBtn.addEventListener("click", () => {
   const answer = getSelected();
 
@@ -87,3 +88,26 @@ nextQuestionBtn.addEventListener("click", () => {
     }
   }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const startQuizButton = document.getElementById("start-quiz");
+  const nameInput = document.getElementById("name");
+  const welcomeMessage = document.getElementById("welcome-message");
+
+  startQuizButton.addEventListener("click", (event) => {
+    event.preventDefault(); // Prevents the form from submitting
+
+    // Check if the name input is empty
+    if (nameInput.value.trim() === "") {
+      alert("Please enter your name.");
+    } else {
+      // Set the welcome message and proceed to quiz
+      welcomeMessage.textContent = `Welcome, ${nameInput.value}! Let's begin the quiz.`;
+      
+      // Hide the start page and show the quiz page
+      document.getElementById("start-page").style.display = "none";
+      document.getElementById("quiz").style.display = "block";
+    }
+  });
+});
+
