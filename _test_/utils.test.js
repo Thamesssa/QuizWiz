@@ -4,7 +4,7 @@ import {
   increaseScore,
   score,
   clearScore,
-} from "../utils";
+} from "../js/utils";
 
 describe("[saveUserName]", () => {
   test("[saveUserName]should defined", () => {

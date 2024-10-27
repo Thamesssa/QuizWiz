@@ -7,7 +7,7 @@
 
 body {
   min-height: 100vh;
-  background-image: url("Untitled design.png") ;
+  background-image: url("./assets/Untitled\ design.png") ;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -112,6 +112,15 @@ ul li label {
 
 #submit:hover {
   background: #7c0470;
+}
+
+.quiz-complete{
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  padding: 20px;
+  margin: 20px;
+  text-align: center;
 }
 
 /* Responsive Adjustments */
