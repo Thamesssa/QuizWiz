@@ -1,6 +1,8 @@
 let username = "";
 let score = 0;
 
+
+//Function to validate the name of the player
 function saveUserName(name) {
   if (typeof name !== "string") {
     throw new Error("Enter valid name");
@@ -11,6 +13,7 @@ function saveUserName(name) {
   username = name.trim();
 }
 
+//function to increase the score depending on the answer
 function increaseScore(isCorrect) {
   if (isCorrect) {
     score += 1;
@@ -18,6 +21,8 @@ function increaseScore(isCorrect) {
   return score;
 }
 
+
+//function to clear score, used for testing purposes
 function clearScore (){
     score = 0
 }

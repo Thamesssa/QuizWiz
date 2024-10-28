@@ -53,6 +53,7 @@ function getSelected() {
   return answer;
 }
 
+//function to start the quiz and validate the name
 function startQuiz() {
   const name = document.getElementById("name").value;
   if (name.trim() === "") {
@@ -72,17 +73,22 @@ function startQuiz() {
   loadQuiz();
 }
 
-
+//function  controlling the flow of the the quiz
 function nextQuestion() {
   const answer = getSelected();
 
+  //checks if answer is selected
   if (!answer) {
     alert('Please choose an answer before proceeding.');
     return; 
   }
 
+  
+
   if (answer) {
+    //update the score and move to the question
     const isCorrect = answer === limitedQuestions[currentQuiz].answer;
+    const name = document.getElementById("name").value;
     score = increaseScore(isCorrect);
     localStorage.setItem("score", score);
 
@@ -92,10 +98,11 @@ function nextQuestion() {
     ).textContent = `Goodluck ${name}`;
   
     
-
+    
     currentQuiz++;
     localStorage.setItem("currentQuiz", currentQuiz);
 
+    
     if (currentQuiz < limitedQuestions.length) {
       loadQuiz();
     } else {
@@ -104,6 +111,7 @@ function nextQuestion() {
   }
 }
 
+//button for starting the quiz the quiz
 startQuizBtn.addEventListener("click", (e) => {
   e.preventDefault();
   startQuiz();
@@ -111,6 +119,8 @@ startQuizBtn.addEventListener("click", (e) => {
 
 nextQuestionBtn.addEventListener("click", nextQuestion);
 
+
+//function to display the results at the end of the all the question answered
 function displayResults() {
   let message = "";
   if (score === 5) {
@@ -133,6 +143,7 @@ function displayResults() {
   localStorage.clear();
 }
 
+//load the previous state of the quiz
 window.addEventListener("DOMContentLoaded", () => {
   if (savedName) {
     document.getElementById("start-page").style.display = "none";
