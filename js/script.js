@@ -12,6 +12,8 @@ const d_text = document.getElementById("d_text");
 const nextQuestionBtn = document.getElementById("submit");
 const startQuizBtn = document.getElementById("start-quiz");
 
+
+
 // Shuffle and limit the quizQuestions array
 let limitedQuestions;
 if (localStorage.getItem("limitedQuestions")) {
@@ -65,7 +67,7 @@ function startQuiz() {
   quiz.style.display = "flex";
   document.getElementById(
     "welcome-message"
-  ).textContent = `Welcome, ${name}! Let's begin the quiz.`;
+  ).textContent = `Welcome ${name}, You may Begin`;
 
   loadQuiz();
 }
@@ -74,10 +76,22 @@ function startQuiz() {
 function nextQuestion() {
   const answer = getSelected();
 
+  if (!answer) {
+    alert('Please choose an answer before proceeding.');
+    return; 
+  }
+
   if (answer) {
     const isCorrect = answer === limitedQuestions[currentQuiz].answer;
     score = increaseScore(isCorrect);
     localStorage.setItem("score", score);
+
+    
+    document.getElementById(
+      "welcome-message"
+    ).textContent = `Goodluck ${name}`;
+  
+    
 
     currentQuiz++;
     localStorage.setItem("currentQuiz", currentQuiz);
