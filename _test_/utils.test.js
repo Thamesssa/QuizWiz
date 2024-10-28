@@ -14,7 +14,7 @@ describe("[saveUserName]", () => {
     expect(typeof saveUserName).toBe("function");
   });
   test("[saveUserName] parameter should be a string", () => {
-    expect(() => saveUserName(12)).toThrow("Enter valid name");
+    expect(() => saveUserName(12)).toThrow("Enter a valid name");
   });
   it("saveUserName] should be a not  be empty", () => {
     expect(() => saveUserName("")).toThrow("Name is required");
