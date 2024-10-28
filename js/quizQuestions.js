@@ -108,10 +108,10 @@ const quizQuestions = [
   {
     question: "What is a test suite?",
     options: [
-      "A single test case",
-      "A collection of test cases",
-      "A tool for running tests",
-      "A file for storing tests",
+      "A. A single test case",
+      "B. A collection of test cases",
+      "C. A tool for running tests",
+      "D. A file for storing tests",
     ],
     answer: "b",
   },

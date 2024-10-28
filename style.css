@@ -13,10 +13,17 @@ body {
   min-height: 100vh;
   background-image: url("./assets/Untitled\ design.png") ;
   display: flex;
+  flex-direction: column;
+
   justify-content: center;
   align-items: center;
   padding: 20px;
   color: #2d3748;
+}
+#header-container{
+  margin-bottom: 20px;
+  color: #211bd568;
+  background: #c64ad264;
 }
 
 
