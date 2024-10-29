@@ -1,4 +1,4 @@
-import { username, saveUserName, increaseScore } from "./utils.js";
+import {  saveUserName, increaseScore } from "./utils.js";
 import { quizQuestions } from "./quizQuestions.js";
 
 // Get elements from HTML
