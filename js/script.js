@@ -1,4 +1,4 @@
-import {  saveUserName, increaseScore } from "./utils.js";
+import {  saveUserName, increaseScore,limitedQuestions,randsomizeQuestion } from "./utils.js";
 import { quizQuestions } from "./quizQuestions.js";
 
 // Get elements from HTML
@@ -15,12 +15,11 @@ const startQuizBtn = document.getElementById("start-quiz");
 
 
 // Shuffle and limit the quizQuestions array
-let limitedQuestions;
+
 if (localStorage.getItem("limitedQuestions")) {
   limitedQuestions = JSON.parse(localStorage.getItem("limitedQuestions"));
 } else {
-  const shuffledQuestions = quizQuestions.sort(() => 0.5 - Math.random());
-  limitedQuestions = shuffledQuestions.slice(0, 5);
+    randsomizeQuestion()
   localStorage.setItem("limitedQuestions", JSON.stringify(limitedQuestions));
 }
 

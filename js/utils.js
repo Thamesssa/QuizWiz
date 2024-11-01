@@ -1,5 +1,9 @@
-let username = "";
+let username = [];
 let score = 0;
+let answer ;
+let currentQuiz = 0;
+let limitedQuestions;
+import { quizQuestions } from "./quizQuestions";
 
 
 //Function to validate the name of the player
@@ -22,9 +26,27 @@ function increaseScore(isCorrect) {
 }
 
 
+function randsomizeQuestion(){
+  const shuffledQuestions = quizQuestions.sort(() => 0.5 - Math.random());
+  limitedQuestions = shuffledQuestions.slice(0, 5);
+}
+
+function answerSelected(answer){
+  if(answer===true){
+    currentQuiz++
+    
+  }
+  else{
+    currentQuiz = currentQuiz
+  }
+}
+
+
+
+
 //function to clear score, used for testing purposes
 function clearScore (){
     score = 0
 }
 
-export { username, saveUserName, increaseScore, score , clearScore};
+export { username, saveUserName, increaseScore, score , clearScore,randsomizeQuestion,limitedQuestions};
