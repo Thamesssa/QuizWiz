@@ -1,4 +1,5 @@
-import { username, saveUserName, increaseScore, score, clearScore } from "../js/utils";
+import { quizQuestions } from "../js/quizQuestions";
+import { username, saveUserName, increaseScore, score, clearScore, answerSelected,currentQuiz, randomizeQuestion, answer, clearQuiz, limitedQuestions } from "../js/utils";
 
 //Tests for saveUserName function
 describe("saveUserName", () => {
@@ -44,6 +45,49 @@ describe("increaseScore", () => {
     expect(score).toBe(2);
   });
 });
+
+describe ("answerSelected", () =>{
+  beforeEach(()=>{
+    clearQuiz()
+  })
+  test("if the answer is selected the currentQuiz should increase", () =>{
+    answerSelected(true)
+    expect(currentQuiz).toBe(1)
+  })
+  // test("current quiz question remains the same", () =>{
+  //   answerSelected(false)
+  //   expect(currentQuiz).toBe(0)
+  // })
+
+  test("increament current quiz when selected answer fo multiple Question", () =>{
+    answerSelected(true)
+    answerSelected(true)
+    expect(currentQuiz).toBe(2)
+  })
+
+  test("if the answer is not selected throw error", () =>{
+    
+    expect(()=>answerSelected(false)).toThrow("Select the answer");
+  })
+  
+  
+})
+
+describe ("randomizeQuestion", () =>{
+  beforeEach(() =>{
+    // limitedQuestions = [];
+  })
+
+  // test("if the shuffledQuestions is equal to quizQuestions",()=>{
+  //   quizQuestions;
+  //   expect(shuffledQuestions).toEqual(quizQuestions);
+  // })
+
+  test("it should return 5 questions", () =>{
+    randomizeQuestion();
+    expect(randomizeQuestion.length).toBe(0);
+  })
+})
 
 // Grouping tests for clearScore function
 describe("clearScore", () => {

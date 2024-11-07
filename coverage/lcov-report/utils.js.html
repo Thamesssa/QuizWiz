@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">66.66% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>12/18</span>
+                <span class='fraction'>23/23</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">75% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>6/8</span>
+                <span class='fraction'>8/8</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">50% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>3/6</span>
+                <span class='fraction'>7/7</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">70.58% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>12/17</span>
+                <span class='fraction'>22/22</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line medium'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -115,11 +115,18 @@
 <a name='L50'></a><a href='#L50'>50</a>
 <a name='L51'></a><a href='#L51'>51</a>
 <a name='L52'></a><a href='#L52'>52</a>
-<a name='L53'></a><a href='#L53'>53</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -144,17 +151,20 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">276x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -166,13 +176,17 @@
 <span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">let username = [];
 let score = 0;
 let answer ;
 let currentQuiz = 0;
-let limitedQuestions;
-import { quizQuestions } from "./quizQuestions";
+let limitedQuestions=[];
+import { quizQuestions } from "./quizQuestions.js";
 &nbsp;
 &nbsp;
 //Function to validate the name of the player
@@ -195,19 +209,22 @@ function increaseScore(isCorrect) {
 }
 &nbsp;
 &nbsp;
-function <span class="fstat-no" title="function not covered" >randsomizeQuestion(</span>){
-  const shuffledQuestions = <span class="cstat-no" title="statement not covered" >quizQuestions.sort(<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >0.5 - Math.random())</span>;</span>
-<span class="cstat-no" title="statement not covered" >  limitedQuestions = shuffledQuestions.slice(0, 5);</span>
+function randomizeQuestion(){
+  const shuffledQuestions = quizQuestions.sort(() =&gt; 0.5 - Math.random());
+  limitedQuestions = shuffledQuestions.slice(0, 5);
+  console.log(quizQuestions.length)
 }
 &nbsp;
-function <span class="fstat-no" title="function not covered" >answerSelected(</span>answer){
-<span class="cstat-no" title="statement not covered" >  if(answer===true){</span>
-<span class="cstat-no" title="statement not covered" >    currentQuiz++</span>
+function answerSelected(answer){
+  if(answer===true){
+    currentQuiz++
     
   }
   else{
-<span class="cstat-no" title="statement not covered" >    currentQuiz = currentQuiz</span>
+    currentQuiz = currentQuiz
+   throw new Error("Select the answer")
   }
+  
 }
 &nbsp;
 &nbsp;
@@ -217,8 +234,12 @@ function <span class="fstat-no" title="function not covered" >answerSelected(</s
 function clearScore (){
     score = 0
 }
+function clearQuiz (){
+  currentQuiz= 0
+}
 &nbsp;
-export { username, saveUserName, increaseScore, score , clearScore,randsomizeQuestion,limitedQuestions};
+randomizeQuestion()
+export { username, saveUserName, increaseScore, score , clearScore,randomizeQuestion,limitedQuestions, answer, answerSelected,currentQuiz, clearQuiz};
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -226,7 +247,7 @@ export { username, saveUserName, increaseScore, score , clearScore,randsomizeQue
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2024-11-04T19:30:59.128Z
+                at 2024-11-07T12:45:21.675Z
             </div>
         <script src="prettify.js"></script>
         <script>

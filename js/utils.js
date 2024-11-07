@@ -2,8 +2,8 @@ let username = [];
 let score = 0;
 let answer ;
 let currentQuiz = 0;
-let limitedQuestions;
-import { quizQuestions } from "./quizQuestions";
+let limitedQuestions=[];
+import { quizQuestions } from "./quizQuestions.js";
 
 
 //Function to validate the name of the player
@@ -26,9 +26,10 @@ function increaseScore(isCorrect) {
 }
 
 
-function randsomizeQuestion(){
+function randomizeQuestion(){
   const shuffledQuestions = quizQuestions.sort(() => 0.5 - Math.random());
   limitedQuestions = shuffledQuestions.slice(0, 5);
+  console.log(quizQuestions.length)
 }
 
 function answerSelected(answer){
@@ -38,7 +39,9 @@ function answerSelected(answer){
   }
   else{
     currentQuiz = currentQuiz
+   throw new Error("Select the answer")
   }
+  
 }
 
 
@@ -48,5 +51,9 @@ function answerSelected(answer){
 function clearScore (){
     score = 0
 }
+function clearQuiz (){
+  currentQuiz= 0
+}
 
-export { username, saveUserName, increaseScore, score , clearScore,randsomizeQuestion,limitedQuestions};
+randomizeQuestion()
+export { username, saveUserName, increaseScore, score , clearScore,randomizeQuestion,limitedQuestions, answer, answerSelected,currentQuiz, clearQuiz};
