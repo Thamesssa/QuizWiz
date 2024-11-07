@@ -55,8 +55,8 @@ describe ("answerSelected", () =>{
     expect(currentQuiz).toBe(1)
   })
   // test("current quiz question remains the same", () =>{
-  //   answerSelected(false)
-  //   expect(currentQuiz).toBe(0)
+  //   const answerSelected = answerSelected(false)
+  //   expect(answerSelected).toBe(0)
   // })
 
   test("increament current quiz when selected answer fo multiple Question", () =>{
@@ -77,11 +77,6 @@ describe ("randomizeQuestion", () =>{
   beforeEach(() =>{
     // limitedQuestions = [];
   })
-
-  // test("if the shuffledQuestions is equal to quizQuestions",()=>{
-  //   quizQuestions;
-  //   expect(shuffledQuestions).toEqual(quizQuestions);
-  // })
 
   test("it should return 5 questions", () =>{
     randomizeQuestion();
